@@ -236,9 +236,9 @@ export default class extends Component {
         return (
             <View style={{flexDirection: 'row', justifyContent: 'center', alignItems: 'center', height: defaultTopIndicatorHeight}}>
                 <ActivityIndicator size="small" color="gray" />
-                <Text ref={(c) => {this.txtPulling = c;}} style={styles.hide}>{i18n.pulling}</Text>
-                <Text ref={(c) => {this.txtPullok = c;}} style={styles.hide}>{i18n.pullok}</Text>
-                <Text ref={(c) => {this.txtPullrelease = c;}} style={styles.hide}>{i18n.pullrelease}</Text>
+                <Text ref={(c) => {this.txtPulling = c;}} style={styles.hide}>{this.props.pullingText || i18n.pulling}</Text>
+                <Text ref={(c) => {this.txtPullok = c;}} style={styles.hide}>{this.props.pullokText || i18n.pullok}</Text>
+                <Text ref={(c) => {this.txtPullrelease = c;}} style={styles.hide}>{this.props.pullreleaseText || i18n.pullrelease}</Text>
             </View>
         );
     }
