@@ -113,6 +113,7 @@ export default class extends Component {
     onPanResponderRelease(e, gesture) {
         if (this.flag.pulling) { //没有下拉到位
             this.resetDefaultXYHandler(); //重置状态
+            this.props.onRelease();
         }
         if (this.flag.pullok) {
             if (!this.flag.pullrelease) {
